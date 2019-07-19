@@ -7,6 +7,6 @@ The parametrization as DoG leads to 11 Parameters per Kernel (3 for Covariance, 
 These Kernels are size invariant, it is possible to adapt them to the resolution of the image.
 My assumption was, that this way of parametrizing exploits the fact that neighbouring weights in a filter are highly correlated, while not losing too much expressiveness. This could possibly also improves the initialization of the weights.
 
-Apart from possibly losing expressiveness, the biggest drawback is, that the filter-weights have to be calculated after each update, leading to slower training (in my implementation a factor of about 5).
+Apart from possibly losing expressiveness, the biggest drawback is, that the filter-weights have to be calculated after each update, leading to slower training (in my implementation a factor of about 5). The performance is also a bit worse.
 
-So anyway, here is my implementation in Pytorch.
+So anyway, here is my implementation in Pytorch. I took some inspiration (and code) from [here](https://github.com/kuangliu/pytorch-cifar)
